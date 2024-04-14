@@ -24,7 +24,6 @@ $mail->addAddress('kelvinomos82@gmail.com','');
 // Sending plain text email
 $mail->isHTML(false); // Set email format to plain text
 $mail->Subject = $_POST['subject'];
-$mail->Body = 'Name: ' + $_POST['name'] + 'Email: ' + $_POST['email'] + 'Message: ' + $_POST['message'];
 $mail->Body = <<<EOT
             Email: {$_POST['email']}
             Name: {$_POST['name']}
