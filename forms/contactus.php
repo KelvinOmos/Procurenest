@@ -19,6 +19,7 @@ $mail->Port = 465;
 // Sender and recipient settings
 $mail->setFrom('procuren@procurenest.ng', 'Procurenest');
 $mail->addAddress('Contact@procurenest.ng','');
+$mail->addAddress('Procurenestng@gmail.com','');
 
 // Sending plain text email
 $mail->isHTML(false); // Set email format to plain text
