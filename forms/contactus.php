@@ -1,9 +1,10 @@
 <?php 
 use PHPMailer\PHPMailer\PHPMailer;
 
-require 'PHPMailer/src/PHPMailer.php';
-require 'PHPMailer/src/Exception.php';
-require 'PHPMailer/src/SMTP.php';
+require '../assets/vendor/PHPMailer/src/PHPMailer.php';
+// require '/assets/vendor/PHPMailer/src/PHPMailer.php';
+require '../assets/vendor/PHPMailer/src/Exception.php';
+require '../assets/vendor/PHPMailer/src/SMTP.php';
 
 $mail = new PHPMailer(true); // Enable exceptions
 
@@ -18,12 +19,17 @@ $mail->Port = 465;
 
 // Sender and recipient settings
 $mail->setFrom('procuren@procurenest.ng', 'Procurenest');
-$mail->addAddress('favouropara48@gmail.com','');
+$mail->addAddress('kelvinomos82@gmail.com','');
 
 // Sending plain text email
 $mail->isHTML(false); // Set email format to plain text
-$mail->Subject = 'Testing mailing with php';
-$mail->Body    = 'This is the plain text message body';
+$mail->Subject = $_POST['subject'];
+$mail->Body = 'Name: ' + $_POST['name'] + 'Email: ' + $_POST['email'] + 'Message: ' + $_POST['message'];
+$mail->Body = <<<EOT
+            Email: {$_POST['email']}
+            Name: {$_POST['name']}
+            Message: {$_POST['message']}
+EOT;
 
 // Send the email
 if(!$mail->send()){
