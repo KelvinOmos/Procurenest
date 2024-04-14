@@ -2,7 +2,6 @@
 use PHPMailer\PHPMailer\PHPMailer;
 
 require '../assets/vendor/PHPMailer/src/PHPMailer.php';
-// require '/assets/vendor/PHPMailer/src/PHPMailer.php';
 require '../assets/vendor/PHPMailer/src/Exception.php';
 require '../assets/vendor/PHPMailer/src/SMTP.php';
 
@@ -12,8 +11,8 @@ $mail = new PHPMailer(true); // Enable exceptions
 $mail->isSMTP();
 $mail->Host = 'mail.procurenest.ng'; // Your SMTP server
 $mail->SMTPAuth = true;
-$mail->Username = '_mainaccount@procurenest.ng'; // Your Mailtrap username
-$mail->Password = '6x]bQS6YAt41u['; // Your Mailtrap password
+$mail->Username = '_mainaccount@procurenest.ng'; // Your username
+$mail->Password = '6x]bQS6YAt41u['; // Your password
 $mail->SMTPSecure = 'ssl';
 $mail->Port = 465;
 
