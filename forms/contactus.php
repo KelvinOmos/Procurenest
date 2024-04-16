@@ -12,7 +12,7 @@ $mail->isSMTP();
 $mail->Host = 'mail.procurenest.ng'; // Your SMTP server
 $mail->SMTPAuth = true;
 $mail->Username = '_mainaccount@procurenest.ng'; // Your username
-$mail->Password = '6x]bQS6YAt41u['; // Your password
+$mail->Password = ''; // Your password
 $mail->SMTPSecure = 'ssl';
 $mail->Port = 465;
 
