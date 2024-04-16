@@ -9,17 +9,16 @@ $mail = new PHPMailer(true); // Enable exceptions
 
 // SMTP Configuration
 $mail->isSMTP();
-$mail->Host = 'mail.procurenest.ng'; // Your SMTP server
+$mail->Host = 'mail.smtp.server'; // Your SMTP server
 $mail->SMTPAuth = true;
-$mail->Username = '_mainaccount@procurenest.ng'; // Your username
+$mail->Username = ''; // Your username
 $mail->Password = ''; // Your password
 $mail->SMTPSecure = 'ssl';
 $mail->Port = 465;
 
 // Sender and recipient settings
-$mail->setFrom('procuren@procurenest.ng', 'Procurenest');
-$mail->addAddress('Contact@procurenest.ng','');
-$mail->addAddress('Procurenestng@gmail.com','');
+$mail->setFrom('mailfrom', '');
+$mail->addAddress('mailto','');
 
 // Sending plain text email
 $mail->isHTML(false); // Set email format to plain text
